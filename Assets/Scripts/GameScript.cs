@@ -10,12 +10,22 @@ public class GameScript : MonoBehaviour
     public float timeAllowed;
     public TMPro.TextMeshProUGUI timerText;
     public GameObject currentItem;
+
+    private TMPro.TextMeshProUGUI objectName;
     
     // Start is called before the first frame update
     void Start()
     {
         initDate = Time.time;
         currentItem = Instantiate(RecycleObjectFactory.generateObject());
+        giveNameObject();
+
+    }
+
+    private void giveNameObject()
+    {
+        objectName = gameObject.transform.Find("ObjectPlaceholder/ObjectName").GetComponent<TMPro.TextMeshProUGUI>();
+        objectName.text = currentItem.GetComponent<RecycleObject>().objectName;
     }
 
     // Update is called once per frame
@@ -24,7 +34,6 @@ public class GameScript : MonoBehaviour
         if (timeAllowed > Time.time - initDate)
         {
             timerText.text = formatTime(timeAllowed - (Time.time - initDate));
-            Debug.Log(currentItem.GetComponent<RecycleObject>().objectName);
         } else
         {
             //deactivate game

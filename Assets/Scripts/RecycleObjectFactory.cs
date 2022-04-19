@@ -7,7 +7,8 @@ public class RecycleObjectFactory : MonoBehaviour
 {
     public static GameObject generateObject()
     {
-        GameObject[] gameObjects = Resources.LoadAll<GameObject>("");
+        GameObject[] gameObjects = Resources.LoadAll<GameObject>("PreFabs");
+
         return gameObjects[Random.Range(0, gameObjects.Length)];
     }
 }
