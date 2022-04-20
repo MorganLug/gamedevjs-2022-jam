@@ -5,20 +5,15 @@ using UnityEngine;
 public class RecycleObject : MonoBehaviour
 {
     public string objectName;
-    public ArrayList actionsToMake;
-    public ArrayList actionsMade;
+    public List<string> actionsToMake;
+    private List<string> actionsMade;
     public int score;
     //other attributes : carbon, ...
 
-
-    public RecycleObject(string objectName , ArrayList actionsToMake, int score)
+    private void Awake()
     {
-        this.objectName = objectName;
-        this.actionsToMake = actionsToMake;
-        this.score = score;
-        this.actionsMade = new ArrayList();
+        actionsMade = new List<string>();
     }
-
     public bool doAction(string action)
     {
         if (isValidAction(action))
@@ -52,6 +47,6 @@ public class RecycleObject : MonoBehaviour
 
     public bool objectTreated()
     {
-        return this.actionsToMake.Equals(this.actionsMade);
+        return actionsMade.Count == actionsToMake.Count;
     }
 }

@@ -44,8 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb198b884420d54693ffac504d242c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recycleObject: {fileID: 0}
   objectName: bouteille
+  actionsToMake:
+  - Broyer
+  - Broyer
   score: 10
 --- !u!1 &8234919179054097646
 GameObject:

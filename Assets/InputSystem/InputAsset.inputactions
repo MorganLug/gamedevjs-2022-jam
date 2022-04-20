@@ -1,0 +1,33 @@
+{
+    "name": "New Controls",
+    "maps": [
+        {
+            "name": "keyboard",
+            "id": "ef9dd4c3-c3bd-4382-9763-91d0101ac612",
+            "actions": [
+                {
+                    "name": "Broyer",
+                    "type": "Button",
+                    "id": "e0bd55d6-86dc-4678-813a-ab99cece087b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d20bf4a5-21fc-47e2-901f-2599b3929ca0",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Broyer",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

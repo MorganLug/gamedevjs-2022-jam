@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 823915264}
   - component: {fileID: 823915263}
   - component: {fileID: 823915262}
+  - component: {fileID: 823915266}
   - component: {fileID: 823915261}
   m_Layer: 5
   m_Name: Canvas
@@ -239,8 +240,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeAllowed: 30
-  timerText: {fileID: 1159825064}
-  currentItem: {fileID: 0}
 --- !u!114 &823915262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,6 +323,40 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &823915266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823915260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 813ddce0d874c1a47bcbbb21a15ca83a, type: 3}
+  m_NotificationBehavior: 3
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e0bd55d6-86dc-4678-813a-ab99cece087b
+    m_ActionName: keyboard/Broyer[/Keyboard/upArrow]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: keyboard
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1159825062
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,7 +503,7 @@ GameObject:
   - component: {fileID: 1258093416}
   - component: {fileID: 1258093415}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: ScoreValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
