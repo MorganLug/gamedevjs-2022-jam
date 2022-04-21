@@ -71,11 +71,16 @@ public class GameScript : MonoBehaviour
                 if (currentRecycleObject.objectTreated())
                 {
                     score += currentRecycleObject.score;
+                    SoundEffectsManager.playSuccessObjectSound();
                     instantiateRecycleObject();
+                } else
+                {
+                    SoundEffectsManager.playSuccessActionSound();
                 }
             } else
             {
                 //Instantiate the new object after error animation has finished playing
+                SoundEffectsManager.playErrorSound();
                 instantiateRecycleObject();
             }
         }
@@ -84,6 +89,11 @@ public class GameScript : MonoBehaviour
     //GameObject logic
     private void instantiateRecycleObject()
     {
+        if (currentGameObject != null)
+        {
+            currentRecycleObject = null;
+            Destroy(currentGameObject);
+        }
         currentGameObject = Instantiate(RecycleObjectFactory.generateObject());
         currentRecycleObject = currentGameObject.GetComponent<RecycleObject>();
         giveNameObject();
