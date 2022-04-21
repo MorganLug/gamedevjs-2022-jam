@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class GameScript : MonoBehaviour
 {
@@ -49,7 +50,8 @@ public class GameScript : MonoBehaviour
         }
         else
         {
-            //deactivate game
+            EndGameManager.setScore(score);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 

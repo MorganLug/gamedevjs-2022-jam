@@ -8,7 +8,6 @@ public class RecycleObject : MonoBehaviour
     public List<string> actionsToMake;
     private List<string> actionsMade;
     public int score;
-    //other attributes : carbon, ...
 
     private void Awake()
     {
