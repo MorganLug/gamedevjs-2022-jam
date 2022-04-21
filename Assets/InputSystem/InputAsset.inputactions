@@ -1,14 +1,46 @@
 {
-    "name": "New Controls",
+    "name": "InputAsset",
     "maps": [
         {
             "name": "keyboard",
             "id": "ef9dd4c3-c3bd-4382-9763-91d0101ac612",
             "actions": [
                 {
-                    "name": "Broyer",
+                    "name": "grind",
                     "type": "Button",
                     "id": "e0bd55d6-86dc-4678-813a-ab99cece087b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "melt",
+                    "type": "Button",
+                    "id": "91409077-0508-40f3-ae77-0b2363db4ebb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "clean",
+                    "type": "Button",
+                    "id": "54fe6292-11b0-43ff-9a81-9b8e7ad80482",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "disassemble",
+                    "type": "Button",
+                    "id": "01f9dbbe-cdf3-4d9c-ad84-5fccf852057e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "discard",
+                    "type": "Button",
+                    "id": "d89d1718-f0fa-43f0-899b-7d0eed040e62",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -18,11 +50,55 @@
                 {
                     "name": "",
                     "id": "d20bf4a5-21fc-47e2-901f-2599b3929ca0",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "grind",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "84fc0b81-3eb2-49d8-95c0-77291b6de1bd",
                     "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Broyer",
+                    "action": "melt",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fa750fc7-09bb-46a9-9346-d1cf2de40c1d",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "clean",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "53ad60bf-993b-4eae-932b-14165443ca18",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "disassemble",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "85050140-7795-4d4f-90b7-8af60771c2c9",
+                    "path": "<Keyboard>/backspace",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "discard",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

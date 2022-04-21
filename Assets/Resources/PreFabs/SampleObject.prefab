@@ -46,8 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectName: bouteille
   actionsToMake:
-  - Broyer
-  - Broyer
+  - clean
+  - clean
   score: 10
 --- !u!1 &8234919179054097646
 GameObject:
