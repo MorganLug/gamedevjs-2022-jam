@@ -8,16 +8,27 @@ public class RecycleObject : MonoBehaviour
     public List<string> actionsToMake;
     private List<string> actionsMade;
     public int score;
+    public Sprite[] spriteList;
+
+    private SpriteRenderer spriteRenderer;
 
     private void Awake()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if(spriteRenderer.sprite==null)
+        {
+            spriteRenderer.sprite=spriteList[0];
+        }
         actionsMade = new List<string>();
     }
     public bool doAction(string action)
     {
         if (isValidAction(action))
         {
-            //Animation lié à l'action
+            if(!objectTreated())
+            {
+                spriteRenderer.sprite = spriteList[actionsMade.Count];
+            }
             return true;
         } else
         {
