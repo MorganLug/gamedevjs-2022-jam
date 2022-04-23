@@ -22,10 +22,14 @@ public class GameScript : MonoBehaviour
 
     private PlayerInput inputSystem;
 
+    private ControlUIHelper controlUIHelper;
+
 
     private void Awake()
     {
         awakeInputSystem();
+
+        controlUIHelper = GetComponent<ControlUIHelper>();
 
         timerText = gameObject.transform.Find("Timer/TimerValue").GetComponent<TMPro.TextMeshProUGUI>();
         scoreText = gameObject.transform.Find("Score/ScoreValue").GetComponent<TMPro.TextMeshProUGUI>();
@@ -99,6 +103,9 @@ public class GameScript : MonoBehaviour
         currentGameObject = Instantiate(RecycleObjectFactory.generateObject());
         currentRecycleObject = currentGameObject.GetComponent<RecycleObject>();
         giveNameObject();
+
+        controlUIHelper.deleteAllControls();
+        controlUIHelper.addControls(currentRecycleObject.actionsToMake);
     }
 
     private void giveNameObject()
