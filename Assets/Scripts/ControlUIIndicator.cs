@@ -8,7 +8,7 @@ public class ControlUIIndicator : MonoBehaviour
 
     private Dictionary<string,int> controlDic = new Dictionary<string, int>();
 
-    void Start() 
+    void Awake() 
     {
         controlDic.Add("grind", 0);
         controlDic.Add("melt", 1);
